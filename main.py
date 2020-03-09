@@ -1,3 +1,11 @@
+"""
+A deeplearning  chatbot implemented  by @GabrielGuan, based on tensorflow v1.13 and nltk.
+
+
+"""
+
+
+
 import nltk
 #nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
@@ -111,12 +119,15 @@ def chat():
         results = model.predict([bag_of_words(inp,words)])
         results_index = np.argmax(results)
         tag = labels[results_index]
+        print(np.max(results))
+        if np.max(results) <0.7:
+            print("I don't understand what are you talking, try to ask another question.")
+        else:
+            for tg in data["intents"]:
+                if  tg['tag'] == tag:
+                    responses = tg['responses']
 
-        for tg in data["intents"]:
-            if  tg['tag'] == tag:
-                responses = tg['responses']
-
-        print(random.choice(responses))
+            print(random.choice(responses))
 
 
 

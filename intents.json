@@ -8,6 +8,18 @@
             "patterns": ["See you", "Goodbye", "I am leaving", "Have a Good day"],
             "responses": ["Talk to you later!", "Goodbye!"],
             "contect_set": ""
+          },
+          {
+            "tag":"friends",
+            "patterns": ["Are you Gabriel?","Hi  Gabriel"],
+            "responses":["Yes I am"],
+            "contect_set": ""
+          },
+          {
+            "tag":"ask name",
+            "patterns": ["What's your name?","How should I call you?"],
+            "responses":["My  name's  Gabriel", "You can call me Gabriel"],
+            "contect_set": ""
           }
     ]
 }
