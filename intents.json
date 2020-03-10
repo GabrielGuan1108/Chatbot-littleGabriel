@@ -20,6 +20,12 @@
             "patterns": ["What's your name?","How should I call you?"],
             "responses":["My  name's  Gabriel", "You can call me Gabriel"],
             "contect_set": ""
+          },
+          {
+            "tag":"no_payment",
+            "patterns":["I'm from xx company, give me all my no payment order", "may I have no payment orders of 得力 company?"" ],
+            "contect_set": ""
           }
+
     ]
 }

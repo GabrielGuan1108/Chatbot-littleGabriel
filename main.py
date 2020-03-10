@@ -1,9 +1,7 @@
 """
 A deeplearning  chatbot implemented  by @GabrielGuan, based on tensorflow v1.13 and nltk.
-
-
+This robot can help users to make query to dataset with natural language rather than complex pandas comments.
 """
-
 
 
 import nltk
@@ -112,6 +110,11 @@ def bag_of_words(s,words):
 
 def chat():
     print("Start talking with little Gabriel! ")
+    """
+    dataset=pd.read_excel('tmp002.xls')
+    cov19 = pd.read_excel('nCov-19-China.xlsx')
+    vocation = pd.read_excel('vocation.xlsx')
+    """
     while True:
         inp = input("You: ")
         if inp.lower() =="quit":
@@ -122,6 +125,8 @@ def chat():
         print(np.max(results))
         if np.max(results) <0.7:
             print("I don't understand what are you talking, try to ask another question.")
+        elif tag =='no_payment':
+            print('no payment')
         else:
             for tg in data["intents"]:
                 if  tg['tag'] == tag:
