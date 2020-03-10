@@ -1,5 +1,5 @@
 """
-A deeplearning  chatbot implemented  by @GabrielGuan, based on tensorflow v1.13 and nltk.
+A deeplearning  chatbot, based on tensorflow v1.13 and nltk.
 This robot can help users to make query to dataset with natural language rather than complex pandas comments.
 """
 
